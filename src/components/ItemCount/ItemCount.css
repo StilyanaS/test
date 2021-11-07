@@ -1,0 +1,16 @@
+button {
+    border: 0;
+}
+
+input {
+    max-width: 4em;
+    margin: auto 1em;
+    text-align: center;
+    border: 0;
+}
+
+.buttons {
+    background-color: #EFEFEF;
+    max-width: 80%;
+    margin: auto;
+}
