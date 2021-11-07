@@ -32,8 +32,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
     <button onClick={onIncr}><FiPlus size={20} /></button>
     <input type="text" placeholder={count} disabled />
     <button onClick={onDecr}><FiMinus size={20} /></button>
-    <Button variant="primary" onClick={handlerOnAdd}>Agregar</Button>
     </div>
+    <Button variant="dark" className="add-to-cart" onClick={handlerOnAdd}>Agregar</Button>
   </Card.Body>
 </Card>
     )

@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
-  function onAdd() {
+  function onAdd(count) {
     console.log(`cantidad ${count}`);
   }
   return (

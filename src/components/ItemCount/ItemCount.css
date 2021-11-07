@@ -14,3 +14,9 @@ input {
     max-width: 80%;
     margin: auto;
 }
+
+.add-to-cart {
+    width: 90%;
+    margin: 1rem auto;
+    border: 0;
+}
