@@ -9,7 +9,7 @@ const NavBar = () => {
     return (
         <Navbar bg="light" variant="light">
         <Container>
-        <Navbar.Brand href="#home">Tennis App</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={"https://freesvg.org/img/Steren_Tennis_ball.png"} width="40" alt="logo"/></Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="#babolat">Babolar</Nav.Link>
           <Nav.Link href="#wilson">Wilson</Nav.Link>
