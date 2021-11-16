@@ -25,7 +25,7 @@ const ItemList = ({ data }) => {
   },[]);
 
   return (
-    <div>
+    <div className='list-container'>
       <ul className="list-group list-group-horizontal">
         {newData.map((item) => (
           <li className="list-group-item w-25" key={item.id}>
