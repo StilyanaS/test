@@ -12,7 +12,7 @@ const ItemDetailContainer = ({ item }) => {
     customFetch(4000, item)
       .then((item) => setgetNewItem(item))
       .finally(() => setLoading(false));
-  }, []);
+  }, [item]);
 
   return (
     <>

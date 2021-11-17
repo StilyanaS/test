@@ -1,4 +1,3 @@
-import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -16,7 +15,7 @@ function ItemListContainer({data}) {
     .then(data => setNewData(data))
     .catch(err => console.log(err))
     .finally(() => setLoading(false))
-  },[]);
+  },[data]);
 
   return (
     <Container>
