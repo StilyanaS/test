@@ -1,7 +1,8 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-import './Item.css'
+import './Item.css';
+import { Link } from 'react-router-dom';
 
 const Item = ({ item }) => {
   return (
@@ -14,7 +15,7 @@ const Item = ({ item }) => {
           {item.description}
           <p><strong>Precio: {item.price}</strong></p>
         </Card.Text>
-        <Button variant="dark">Comprar</Button>
+        <Button variant="dark" ><Link to={`/item/${item.id}`} className='btn-color'>Comprar</Link></Button>
       </Card.Body>
     </Card>
   );

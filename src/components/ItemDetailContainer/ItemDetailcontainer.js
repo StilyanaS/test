@@ -4,15 +4,20 @@ import { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import customFetch from "../../utils/customFetch";
 import './ItemDetailContainer.css'
+import { useParams } from "react-router";
+import data from '../../utils/data'
 
-const ItemDetailContainer = ({ item }) => {
+const ItemDetailContainer = () => {
+
+  const { itemId } = useParams();
   const [getNewItem, setgetNewItem] = useState({});
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    customFetch(4000, item)
-      .then((item) => setgetNewItem(item))
-      .finally(() => setLoading(false));
-  }, [item]);
+    customFetch(2000, data.find((item) => item.id === parseInt(itemId)))
+    .then((item) => setgetNewItem(item))
+    .finally(() => setLoading(false))
+  }, [itemId]) 
 
   return (
     <>

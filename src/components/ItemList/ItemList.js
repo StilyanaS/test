@@ -1,17 +1,18 @@
 import Item from "../Item/Item";
 import "./ItemList.css";
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const ItemList = ({ newData }) => {
 
   return (
     <div className='list-container'>
-      <ul className="list-group list-group-horizontal">
+      <ListGroup horizontal='lg' className="my-2">
         {newData.map((item) => (
-          <li className="list-group-item w-25" key={item.id}>
+          <ListGroup.Item key={item.id}>
             <Item item={item} />
-          </li>
+            </ListGroup.Item>
         ))}
-      </ul>
+      </ListGroup>
     </div>
   );
 };

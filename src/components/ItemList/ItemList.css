@@ -1,7 +1,9 @@
 ul {
-    list-style-type: none;
-    
+    list-style-type: none; 
 }
 .list-container {
     margin: 1em;
+}
+.list-group-item {
+    min-width: 282px;
 }

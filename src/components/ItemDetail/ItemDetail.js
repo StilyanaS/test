@@ -19,10 +19,10 @@ const ItemDetail = ({getNewItem}) => {
         />
       </Col>
       <Col>
-        <Card style={{ margin: "1rem" }}>
-        <Card.Header as="h1">{getNewItem.name}</Card.Header>
+        <Card style={{ margin: "1rem" }} className='card'>
+        <Card.Header as="h1" className='h1card'>{getNewItem.name}</Card.Header>
           <Card.Body>
-            <Card.Title>Babolat Pure Strike</Card.Title>
+            <Card.Title>Tu nueva raqueta</Card.Title>
             <Card.Text>
               {getNewItem.description}
             </Card.Text>
