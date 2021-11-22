@@ -1,3 +1,41 @@
+
+# TENNIS APP ESTELA
+
+This is a basic e-commerce app with simple cart. Provides a brief description and details about the products.
+
+![Logo](https://freesvg.org/img/Steren_Tennis_ball.png)
+
+
+## Documentation
+
+To start editing the project you need
+
+1. Have installed npm package (command: npm i)
+2. Clone the project on local
+3. Install react-bootstrap
+4. Install react-rooter-dom
+
+That's all!
+
+
+
+## Demo
+
+App link:
+https://stupefied-hopper-deab0c.netlify.app/
+
+
+## 🚀 About Me
+I'm a begginer front-end developer
+Here's my Github: https://github.com/StilyanaS
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
