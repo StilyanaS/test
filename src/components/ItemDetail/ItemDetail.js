@@ -4,10 +4,15 @@ import Image from "react-bootstrap/Image";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import Card from 'react-bootstrap/Card';
-
+import Button from 'react-bootstrap/Button';
+import {useState} from 'react';
+import {Link} from 'react-router-dom'
 const ItemDetail = ({getNewItem}) => {
+
+  const [qtityAdded, setqtityAdded] = useState(false);
   function onAdd(count) {
     console.log(`cantidad ${count}`);
+    setqtityAdded(true);
   }
   return (
     <Row className="mt-3">
@@ -28,7 +33,13 @@ const ItemDetail = ({getNewItem}) => {
             </Card.Text>
           </Card.Body>
         </Card>
+        {!qtityAdded ? (
         <ItemCount initial={1} stock={5} onAdd={onAdd} />
+        ) : (
+          <Button variant="dark"> <Link to='/cart' className='btn-color'>Cart</Link></ Button>
+        )
+
+      }
       </Col>
     </Row>
   );

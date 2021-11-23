@@ -29,7 +29,7 @@ const NavBar = () => {
                 <Link to="/about" className='menu-elem'> About</Link>
             </Nav>
           </Navbar.Collapse>
-        <CartWidget />
+          <Link to="/cart" className='menu-elem'><CartWidget /></Link>
       </Container>
     </Navbar>
   );
