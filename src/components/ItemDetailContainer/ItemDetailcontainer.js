@@ -22,10 +22,10 @@ const ItemDetailContainer = () => {
   return (
     <>
       {loading ? (
-        <div class='spinner'><Spinner animation="grow" variant="dark" /></div>
+        <div className='spinner'><Spinner animation="grow" variant="dark" /></div>
       ) : (
         <Container fluid>
-          <ItemDetail getNewItem={getNewItem} />
+          <ItemDetail item={getNewItem} />
         </Container>
       )}
     </>

@@ -2,10 +2,12 @@ import './App.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailcontainer'
-import Cart from './components/Cart/Cart'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailcontainer';
+import Cart from './components/Cart/Cart';
+import CartContextProvider from './context/CartContext/CartContext';
 function App() {
-  return (
+  return ( 
+    <CartContextProvider>
     <BrowserRouter>
     <div className="App">
       <NavBar />
@@ -18,7 +20,7 @@ function App() {
       </Routes>
     </div>
       </BrowserRouter>
-    
+      </CartContextProvider>
   );
 }
 

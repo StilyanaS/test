@@ -1,0 +1,15 @@
+.cart-photo {
+    width:18rem;
+}
+tr .align-me {
+    padding:1.5em;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .span-space {
+      margin: 0 1em;
+  }

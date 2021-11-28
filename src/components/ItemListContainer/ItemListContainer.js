@@ -12,7 +12,6 @@ function ItemListContainer() {
   const [newData, setNewData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { categoryName } = useParams();
-  console.log(categoryName);
   useEffect(() => {
     customFetch(
       2000,

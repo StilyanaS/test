@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
 import "./ItemCount.css";
 import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
+import { CartContext } from "../../context/CartContext/CartContext";
 
-const ItemCount = ({ initial, stock, onAdd }) => {
-  const quantity = 0;
+const ItemCount = ({ initial, stock, onAdd, item }) => {
+  const test = useContext(CartContext);
+  console.log(test);
+  let quantity = 0;
   const [count, setCount] = useState(1);
   function onIncr() {
     count < stock && setCount(count + 1);
@@ -15,11 +18,11 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     count > 1 && setCount(count - 1);
   }
   function handlerOnAdd() {
-    onAdd(count);
+    quantity = count;
+    onAdd(quantity);
     setCount(initial);
   }
-  console.log(count);
-  console.log(quantity);
+  
   return (
     <Stack gap={2} className="col-md-5 mx-auto">
       <div className="count-container">
