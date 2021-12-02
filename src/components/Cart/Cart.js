@@ -9,7 +9,7 @@ import "./Cart.css";
 import Button from "react-bootstrap/esm/Button";
 import Card from 'react-bootstrap/Card';
 const Cart = () => {
-  const { cartList, totalQty, deleteItems, deleteItem } = useContext(CartContext);
+  const { cartList, totalQty, deleteItems, deleteItem, calcTotalPerItem, calcTotal} = useContext(CartContext);
 const handleOnDelete = () => {
     deleteItems();
 }
@@ -46,7 +46,7 @@ const handleOnDelete = () => {
                     <td colSpan="2">
                       {" "}
                       <div className="align-me">
-                        Total: {item.price * item.qty}
+                        Total: {calcTotalPerItem(item.itemId)}
                       </div>
                     </td>
                     <td colSpan="2">
@@ -62,9 +62,9 @@ const handleOnDelete = () => {
         </Col>
         <Col>
           <Card>
-            <Card.Header>Total</Card.Header>
+            <Card.Header>Tienes {totalQty()} productos en el carrito</Card.Header>
             <Card.Body>
-              <Card.Title>Tienes {totalQty} productos en el carrito</Card.Title>
+              <Card.Title>Total: {calcTotal()} euros</Card.Title>
               <Card.Text></Card.Text>
               <Button variant="dark" onClick={handleOnDelete}>Eliminar </Button>
             </Card.Body>

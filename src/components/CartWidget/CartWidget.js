@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {AiOutlineShoppingCart} from 'react-icons/ai';
-import './CartWidget.css'
+import './CartWidget.css';
+import {CartContext} from '../../context/CartContext/CartContext';
 const CartWidget = () => {
+const {cartList, totalQty} = useContext(CartContext);
+
     return (
         <div>
            <AiOutlineShoppingCart size={30}/>
-           <div className='cartCount'><span>1</span></div>
+           {cartList.length > 0 &&
+           <div className='cartCount'><span>{totalQty()}</span></div>}
         </div>
     )
 }
