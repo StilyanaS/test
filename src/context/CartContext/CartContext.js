@@ -10,15 +10,17 @@ const CartContextProvider = ({ children }) => {
       setCartList([
         ...cartList,
         {
+          stock: item.stock,
           image: item.image,
           itemId: item.id,
           name: item.name,
           price: item.price,
-          qty: quantity,
+          qty: quantity
         },
       ]);
     } else {
       foundProduct.qty += quantity;
+      setCartList([...cartList]);
     }
   };
 

@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
 import { CartContext } from "../../context/CartContext/CartContext";
 
-const ItemCount = ({ initial, stock, onAdd, item }) => {
+const ItemCount = ({ initial, stock, onAdd }) => {
   const test = useContext(CartContext);
   console.log(test);
   let quantity = 0;
