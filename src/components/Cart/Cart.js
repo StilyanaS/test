@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import Table from "react-bootstrap/Table";
-import Image from "react-bootstrap/Image";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,7 @@ import Button from "react-bootstrap/esm/Button";
 import Card from "react-bootstrap/Card";
 import { collection, doc, setDoc, updateDoc, increment } from "firebase/firestore";
 import db from "../../utils/firebaseConfig";
-import moment from 'react-moment';
+import CartItem from '../CartItem/CartItem'
 
 const Cart = () => {
   const {
@@ -71,43 +71,7 @@ const Cart = () => {
             <Table bordered hover responsive="sm md" size="sm">
               <tbody>
                 {cartList.map((item) => (
-                  <tr key={item.itemId}>
-                    <td>
-                      <div className="align-me">3</div>
-                    </td>
-                    <td className="w-20">
-                      <Image src={item.image} className="cart-photo" />
-                    </td>
-                    <td colSpan="2">
-                      {" "}
-                      <div className="align-me">
-                        {" "}
-                        <h3>{item.name}</h3>
-                      </div>
-                      <div className="align-me">
-                        <p>
-                          {item.qty} <span className="span-space">x</span>
-                          {item.price}
-                        </p>
-                      </div>
-                    </td>
-                    <td colSpan="2">
-                      {" "}
-                      <div className="align-me">
-                        Total: {calcTotalPerItem(item.itemId)}
-                      </div>
-                    </td>
-                    <td colSpan="2">
-                      <div className="align-me">
-                        <Button
-                          variant="dark"
-                          onClick={() => deleteItem(item.itemId)}
-                        >
-                          Eliminar
-                        </Button>
-                      </div>
-                    </td>
-                  </tr>
+                  <CartItem item={item}/>
                 ))}
               </tbody>
             </Table>

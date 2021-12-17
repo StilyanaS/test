@@ -5,8 +5,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailcontainer';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './context/CartContext/CartContext';
-import Moment from 'react-moment';
-import 'moment-timezone';
 function App() {
   return ( 
     <CartContextProvider>
